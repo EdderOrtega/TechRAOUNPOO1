@@ -106,8 +106,6 @@
             panel1.TabIndex = 4;
             // 
             // groupBox2
-            // 
-<<<<<<< HEAD
             button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
             button6.BackgroundImageLayout = ImageLayout.Stretch;
             button6.Location = new Point(530, 58);
@@ -118,23 +116,6 @@
             // 
             // button7
             // 
-            button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
-            button7.BackgroundImageLayout = ImageLayout.Stretch;
-            button7.Location = new Point(576, 58);
-            button7.Name = "button7";
-            button7.Size = new Size(40, 40);
-            button7.TabIndex = 5;
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
-            button8.BackgroundImageLayout = ImageLayout.Stretch;
-            button8.Location = new Point(622, 58);
-            button8.Name = "button8";
-            button8.Size = new Size(40, 40);
-            button8.TabIndex = 4;
-            button8.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -155,7 +136,6 @@
             button4.Size = new Size(40, 40);
             button4.TabIndex = 2;
             button4.UseVisualStyleBackColor = true;
-=======
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(button3);
@@ -167,7 +147,6 @@
             groupBox2.Size = new Size(156, 106);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
->>>>>>> bb816cd89e643ed2ccc28cc1400bb22e935bc25e
             // 
             // button1
             // 
