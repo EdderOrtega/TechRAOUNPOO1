@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            btnGirarDerecha = new Button();
+            btnGirarIzquierda = new Button();
+            btnRecortar = new Button();
+            btnSeleccion = new Button();
             groupBox2 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btnBorrador = new Button();
+            btnBrocha = new Button();
+            btnMarcador = new Button();
+            btnTexto = new Button();
+            btnLupa = new Button();
+            btnLapiz = new Button();
             GroupBoxBotonesFiguras = new GroupBox();
             btnPentagono = new Button();
             btnCuadrado = new Button();
@@ -51,6 +55,7 @@
             toolStripMenuItem5 = new ToolStripMenuItem();
             toolStripMenuItem4 = new ToolStripMenuItem();
             groupBox1 = new GroupBox();
+            btnSelectorDeColor = new Button();
             btnColorCafe = new Button();
             btnColorLila = new Button();
             btnColorAzulClaro = new Button();
@@ -84,6 +89,8 @@
             deshacerToolStripMenuItem = new ToolStripMenuItem();
             rehacerToolStripMenuItem = new ToolStripMenuItem();
             picPaint = new PictureBox();
+            colorDialog1 = new ColorDialog();
+            fontDialog1 = new FontDialog();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             GroupBoxBotonesFiguras.SuspendLayout();
@@ -95,6 +102,10 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnGirarDerecha);
+            panel1.Controls.Add(btnGirarIzquierda);
+            panel1.Controls.Add(btnRecortar);
+            panel1.Controls.Add(btnSeleccion);
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(GroupBoxBotonesFiguras);
             panel1.Controls.Add(menuStrip2);
@@ -105,108 +116,121 @@
             panel1.Size = new Size(1279, 107);
             panel1.TabIndex = 4;
             // 
-            // groupBox2
-            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
-            button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.Location = new Point(530, 58);
-            button6.Name = "button6";
-            button6.Size = new Size(40, 40);
-            button6.TabIndex = 6;
-            button6.UseVisualStyleBackColor = true;
+            // btnGirarDerecha
             // 
-            // button7
+            btnGirarDerecha.BackgroundImage = (Image)resources.GetObject("btnGirarDerecha.BackgroundImage");
+            btnGirarDerecha.BackgroundImageLayout = ImageLayout.Stretch;
+            btnGirarDerecha.Location = new Point(274, 53);
+            btnGirarDerecha.Name = "btnGirarDerecha";
+            btnGirarDerecha.Size = new Size(50, 50);
+            btnGirarDerecha.TabIndex = 11;
+            btnGirarDerecha.TextAlign = ContentAlignment.MiddleRight;
+            btnGirarDerecha.UseVisualStyleBackColor = true;
             // 
+            // btnGirarIzquierda
             // 
-            // button5
+            btnGirarIzquierda.BackgroundImage = (Image)resources.GetObject("btnGirarIzquierda.BackgroundImage");
+            btnGirarIzquierda.BackgroundImageLayout = ImageLayout.Stretch;
+            btnGirarIzquierda.Location = new Point(218, 53);
+            btnGirarIzquierda.Name = "btnGirarIzquierda";
+            btnGirarIzquierda.Size = new Size(50, 50);
+            btnGirarIzquierda.TabIndex = 10;
+            btnGirarIzquierda.UseVisualStyleBackColor = true;
             // 
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.Location = new Point(530, 12);
-            button5.Name = "button5";
-            button5.Size = new Size(40, 40);
-            button5.TabIndex = 3;
-            button5.UseVisualStyleBackColor = true;
+            // btnRecortar
             // 
-            // button4
+            btnRecortar.BackgroundImage = (Image)resources.GetObject("btnRecortar.BackgroundImage");
+            btnRecortar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRecortar.Location = new Point(68, 53);
+            btnRecortar.Name = "btnRecortar";
+            btnRecortar.Size = new Size(50, 50);
+            btnRecortar.TabIndex = 9;
+            btnRecortar.UseVisualStyleBackColor = true;
             // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.Location = new Point(576, 12);
-            button4.Name = "button4";
-            button4.Size = new Size(40, 40);
-            button4.TabIndex = 2;
-            button4.UseVisualStyleBackColor = true;
-            groupBox2.Controls.Add(button1);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button4);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(button6);
+            // btnSeleccion
+            // 
+            btnSeleccion.BackgroundImage = (Image)resources.GetObject("btnSeleccion.BackgroundImage");
+            btnSeleccion.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSeleccion.Location = new Point(12, 53);
+            btnSeleccion.Name = "btnSeleccion";
+            btnSeleccion.Size = new Size(50, 50);
+            btnSeleccion.TabIndex = 8;
+            btnSeleccion.UseVisualStyleBackColor = true;
+            // 
+
+            groupBox2.Controls.Add(btnBorrador);
+            groupBox2.Controls.Add(btnBrocha);
+            groupBox2.Controls.Add(btnMarcador);
+            groupBox2.Controls.Add(btnTexto);
+            groupBox2.Controls.Add(btnLupa);
+            groupBox2.Controls.Add(btnLapiz);
             groupBox2.Location = new Point(516, 0);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(156, 106);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             // 
-            // button1
+            // btnBorrador
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(12, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(40, 40);
-            button1.TabIndex = 6;
-            button1.UseVisualStyleBackColor = true;
+            btnBorrador.BackgroundImage = (Image)resources.GetObject("btnBorrador.BackgroundImage");
+            btnBorrador.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBorrador.Location = new Point(12, 59);
+            btnBorrador.Name = "btnBorrador";
+            btnBorrador.Size = new Size(40, 40);
+            btnBorrador.TabIndex = 6;
+            btnBorrador.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBrocha
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(58, 13);
-            button2.Name = "button2";
-            button2.Size = new Size(40, 40);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = true;
+            btnBrocha.BackgroundImage = (Image)resources.GetObject("btnBrocha.BackgroundImage");
+            btnBrocha.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBrocha.Location = new Point(58, 13);
+            btnBrocha.Name = "btnBrocha";
+            btnBrocha.Size = new Size(40, 40);
+            btnBrocha.TabIndex = 2;
+            btnBrocha.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnMarcador
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(58, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(40, 40);
-            button3.TabIndex = 5;
-            button3.UseVisualStyleBackColor = true;
+            btnMarcador.BackgroundImage = (Image)resources.GetObject("btnMarcador.BackgroundImage");
+            btnMarcador.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMarcador.Location = new Point(58, 59);
+            btnMarcador.Name = "btnMarcador";
+            btnMarcador.Size = new Size(40, 40);
+            btnMarcador.TabIndex = 5;
+            btnMarcador.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnTexto
             // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.Location = new Point(104, 13);
-            button4.Name = "button4";
-            button4.Size = new Size(40, 40);
-            button4.TabIndex = 0;
-            button4.UseVisualStyleBackColor = true;
+            btnTexto.BackgroundImage = (Image)resources.GetObject("btnTexto.BackgroundImage");
+            btnTexto.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTexto.Location = new Point(104, 13);
+            btnTexto.Name = "btnTexto";
+            btnTexto.Size = new Size(40, 40);
+            btnTexto.TabIndex = 0;
+            btnTexto.UseVisualStyleBackColor = true;
+            btnTexto.Click += btnTexto_Click;
             // 
-            // button5
+            // btnLupa
             // 
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.Location = new Point(104, 59);
-            button5.Name = "button5";
-            button5.Size = new Size(40, 40);
-            button5.TabIndex = 4;
-            button5.UseVisualStyleBackColor = true;
+            btnLupa.BackgroundImage = (Image)resources.GetObject("btnLupa.BackgroundImage");
+            btnLupa.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLupa.Location = new Point(104, 59);
+            btnLupa.Name = "btnLupa";
+            btnLupa.Size = new Size(40, 40);
+            btnLupa.TabIndex = 4;
+            btnLupa.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnLapiz
             // 
-            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
-            button6.BackgroundImageLayout = ImageLayout.Stretch;
-            button6.Location = new Point(12, 13);
-            button6.Name = "button6";
-            button6.Size = new Size(40, 40);
-            button6.TabIndex = 3;
-            button6.UseVisualStyleBackColor = true;
+            btnLapiz.BackColor = SystemColors.Control;
+            btnLapiz.BackgroundImage = (Image)resources.GetObject("btnLapiz.BackgroundImage");
+            btnLapiz.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLapiz.Location = new Point(12, 13);
+            btnLapiz.Name = "btnLapiz";
+            btnLapiz.Size = new Size(40, 40);
+            btnLapiz.TabIndex = 3;
+            btnLapiz.UseVisualStyleBackColor = false;
             // 
             // GroupBoxBotonesFiguras
             // 
@@ -290,9 +314,9 @@
             menuStrip2.Dock = DockStyle.None;
             menuStrip2.ImageScalingSize = new Size(24, 24);
             menuStrip2.Items.AddRange(new ToolStripItem[] { grosorLineaToolStripMenuItem });
-            menuStrip2.Location = new Point(295, 59);
+            menuStrip2.Location = new Point(366, 64);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(200, 36);
+            menuStrip2.Size = new Size(134, 36);
             menuStrip2.TabIndex = 6;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -309,7 +333,7 @@
             toolStripMenuItem2.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem2.BackgroundImage");
             toolStripMenuItem2.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(270, 34);
+            toolStripMenuItem2.Size = new Size(102, 34);
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem3
@@ -317,7 +341,7 @@
             toolStripMenuItem3.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem3.BackgroundImage");
             toolStripMenuItem3.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(270, 34);
+            toolStripMenuItem3.Size = new Size(102, 34);
             // 
             // toolStripMenuItem5
             // 
@@ -325,17 +349,18 @@
             toolStripMenuItem5.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem5.BackgroundImage");
             toolStripMenuItem5.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(270, 34);
+            toolStripMenuItem5.Size = new Size(102, 34);
             // 
             // toolStripMenuItem4
             // 
             toolStripMenuItem4.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem4.BackgroundImage");
             toolStripMenuItem4.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(270, 34);
+            toolStripMenuItem4.Size = new Size(102, 34);
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnSelectorDeColor);
             groupBox1.Controls.Add(btnColorCafe);
             groupBox1.Controls.Add(btnColorLila);
             groupBox1.Controls.Add(btnColorAzulClaro);
@@ -362,6 +387,17 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Colores";
+            // 
+            // btnSelectorDeColor
+            // 
+            btnSelectorDeColor.BackgroundImage = (Image)resources.GetObject("btnSelectorDeColor.BackgroundImage");
+            btnSelectorDeColor.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSelectorDeColor.Location = new Point(17, 28);
+            btnSelectorDeColor.Name = "btnSelectorDeColor";
+            btnSelectorDeColor.Size = new Size(60, 60);
+            btnSelectorDeColor.TabIndex = 23;
+            btnSelectorDeColor.UseVisualStyleBackColor = true;
+            btnSelectorDeColor.Click += btnSelectorDeColor_Click;
             // 
             // btnColorCafe
             // 
@@ -627,7 +663,7 @@
             // 
             // picPaint
             // 
-            picPaint.BackColor = SystemColors.ActiveCaption;
+            picPaint.BackColor = Color.WhiteSmoke;
             picPaint.Location = new Point(12, 114);
             picPaint.Name = "picPaint";
             picPaint.Size = new Size(1254, 518);
@@ -704,12 +740,12 @@
         private ToolStripMenuItem rehacerToolStripMenuItem;
         private PictureBox picPaint;
         private GroupBox groupBox2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button btnBorrador;
+        private Button btnBrocha;
+        private Button btnMarcador;
+        private Button btnTexto;
+        private Button btnLupa;
+        private Button btnLapiz;
         private GroupBox GroupBoxBotonesFiguras;
         private MenuStrip menuStrip2;
         private ToolStripMenuItem grosorLineaToolStripMenuItem;
@@ -718,5 +754,12 @@
         private ToolStripMenuItem toolStripMenuItem5;
         private ToolStripMenuItem toolStripMenuItem4;
         private Button btnColorCafe;
+        private Button btnSelectorDeColor;
+        private ColorDialog colorDialog1;
+        private Button btnSeleccion;
+        private Button btnGirarDerecha;
+        private Button btnGirarIzquierda;
+        private Button btnRecortar;
+        private FontDialog fontDialog1;
     }
 }
