@@ -49,13 +49,9 @@ namespace TechRAOUNPOO1
         private void btnTexto_Click(object sender, EventArgs e)
         {
             fontDialog1.Font = currentFont;
-
-           
             if (fontDialog1.ShowDialog() == DialogResult.OK)
             {
                 currentFont = fontDialog1.Font;
-
-    
             }
         }
     }
