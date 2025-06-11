@@ -91,6 +91,11 @@
             picPaint = new PictureBox();
             colorDialog1 = new ColorDialog();
             fontDialog1 = new FontDialog();
+            copiarToolStripMenuItem = new ToolStripMenuItem();
+            pegarToolStripMenuItem = new ToolStripMenuItem();
+            cortarToolStripMenuItem = new ToolStripMenuItem();
+            cuadriculaToolStripMenuItem = new ToolStripMenuItem();
+            zoomToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             GroupBoxBotonesFiguras.SuspendLayout();
@@ -157,7 +162,8 @@
             btnSeleccion.TabIndex = 8;
             btnSeleccion.UseVisualStyleBackColor = true;
             // 
-
+            // groupBox2
+            // 
             groupBox2.Controls.Add(btnBorrador);
             groupBox2.Controls.Add(btnBrocha);
             groupBox2.Controls.Add(btnMarcador);
@@ -333,7 +339,7 @@
             toolStripMenuItem2.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem2.BackgroundImage");
             toolStripMenuItem2.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(102, 34);
+            toolStripMenuItem2.Size = new Size(270, 34);
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem3
@@ -341,7 +347,7 @@
             toolStripMenuItem3.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem3.BackgroundImage");
             toolStripMenuItem3.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(102, 34);
+            toolStripMenuItem3.Size = new Size(270, 34);
             // 
             // toolStripMenuItem5
             // 
@@ -349,14 +355,14 @@
             toolStripMenuItem5.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem5.BackgroundImage");
             toolStripMenuItem5.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(102, 34);
+            toolStripMenuItem5.Size = new Size(270, 34);
             // 
             // toolStripMenuItem4
             // 
             toolStripMenuItem4.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem4.BackgroundImage");
             toolStripMenuItem4.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(102, 34);
+            toolStripMenuItem4.Size = new Size(270, 34);
             // 
             // groupBox1
             // 
@@ -633,12 +639,14 @@
             // 
             // editarToolStripMenuItem
             // 
+            editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { copiarToolStripMenuItem, pegarToolStripMenuItem, cortarToolStripMenuItem });
             editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             editarToolStripMenuItem.Size = new Size(73, 29);
             editarToolStripMenuItem.Text = "Editar";
             // 
             // verToolStripMenuItem
             // 
+            verToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cuadriculaToolStripMenuItem, zoomToolStripMenuItem });
             verToolStripMenuItem.Name = "verToolStripMenuItem";
             verToolStripMenuItem.Size = new Size(53, 29);
             verToolStripMenuItem.Text = "Ver";
@@ -669,6 +677,36 @@
             picPaint.Size = new Size(1254, 518);
             picPaint.TabIndex = 5;
             picPaint.TabStop = false;
+            // 
+            // copiarToolStripMenuItem
+            // 
+            copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
+            copiarToolStripMenuItem.Size = new Size(270, 34);
+            copiarToolStripMenuItem.Text = "Copiar";
+            // 
+            // pegarToolStripMenuItem
+            // 
+            pegarToolStripMenuItem.Name = "pegarToolStripMenuItem";
+            pegarToolStripMenuItem.Size = new Size(270, 34);
+            pegarToolStripMenuItem.Text = "Pegar";
+            // 
+            // cortarToolStripMenuItem
+            // 
+            cortarToolStripMenuItem.Name = "cortarToolStripMenuItem";
+            cortarToolStripMenuItem.Size = new Size(270, 34);
+            cortarToolStripMenuItem.Text = "Cortar";
+            // 
+            // cuadriculaToolStripMenuItem
+            // 
+            cuadriculaToolStripMenuItem.Name = "cuadriculaToolStripMenuItem";
+            cuadriculaToolStripMenuItem.Size = new Size(270, 34);
+            cuadriculaToolStripMenuItem.Text = "Cuadricula";
+            // 
+            // zoomToolStripMenuItem
+            // 
+            zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
+            zoomToolStripMenuItem.Size = new Size(270, 34);
+            zoomToolStripMenuItem.Text = "Zoom";
             // 
             // Form1
             // 
@@ -761,5 +799,10 @@
         private Button btnGirarIzquierda;
         private Button btnRecortar;
         private FontDialog fontDialog1;
+        private ToolStripMenuItem copiarToolStripMenuItem;
+        private ToolStripMenuItem pegarToolStripMenuItem;
+        private ToolStripMenuItem cortarToolStripMenuItem;
+        private ToolStripMenuItem cuadriculaToolStripMenuItem;
+        private ToolStripMenuItem zoomToolStripMenuItem;
     }
 }
