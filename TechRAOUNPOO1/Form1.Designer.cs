@@ -32,11 +32,17 @@
             panel1 = new Panel();
             btnGirarDerecha = new Button();
             btnGirarIzquierda = new Button();
+            menuStrip2 = new MenuStrip();
+            grosorLineaToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            toolStripMenuItem5 = new ToolStripMenuItem();
+            toolStripMenuItem4 = new ToolStripMenuItem();
             btnRecortar = new Button();
             btnSeleccion = new Button();
             groupBox2 = new GroupBox();
             btnBorrador = new Button();
-            btnBrocha = new Button();
+            btnRelleno = new Button();
             btnMarcador = new Button();
             btnTexto = new Button();
             btnLupa = new Button();
@@ -48,12 +54,6 @@
             btnRombo = new Button();
             btnRectangulo = new Button();
             btnCirculo = new Button();
-            menuStrip2 = new MenuStrip();
-            grosorLineaToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
-            toolStripMenuItem5 = new ToolStripMenuItem();
-            toolStripMenuItem4 = new ToolStripMenuItem();
             groupBox1 = new GroupBox();
             btnSelectorDeColor = new Button();
             btnColorCafe = new Button();
@@ -84,22 +84,22 @@
             guardarComoToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
             editarToolStripMenuItem = new ToolStripMenuItem();
+            copiarToolStripMenuItem = new ToolStripMenuItem();
+            pegarToolStripMenuItem = new ToolStripMenuItem();
+            cortarToolStripMenuItem = new ToolStripMenuItem();
             verToolStripMenuItem = new ToolStripMenuItem();
+            cuadriculaToolStripMenuItem = new ToolStripMenuItem();
+            zoomToolStripMenuItem = new ToolStripMenuItem();
             guardarToolStripMenuItem = new ToolStripMenuItem();
             deshacerToolStripMenuItem = new ToolStripMenuItem();
             rehacerToolStripMenuItem = new ToolStripMenuItem();
             picPaint = new PictureBox();
             colorDialog1 = new ColorDialog();
             fontDialog1 = new FontDialog();
-            copiarToolStripMenuItem = new ToolStripMenuItem();
-            pegarToolStripMenuItem = new ToolStripMenuItem();
-            cortarToolStripMenuItem = new ToolStripMenuItem();
-            cuadriculaToolStripMenuItem = new ToolStripMenuItem();
-            zoomToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
+            menuStrip2.SuspendLayout();
             groupBox2.SuspendLayout();
             GroupBoxBotonesFiguras.SuspendLayout();
-            menuStrip2.SuspendLayout();
             groupBox1.SuspendLayout();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picPaint).BeginInit();
@@ -107,13 +107,14 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.PowderBlue;
             panel1.Controls.Add(btnGirarDerecha);
             panel1.Controls.Add(btnGirarIzquierda);
+            panel1.Controls.Add(menuStrip2);
             panel1.Controls.Add(btnRecortar);
             panel1.Controls.Add(btnSeleccion);
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(GroupBoxBotonesFiguras);
-            panel1.Controls.Add(menuStrip2);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(menuStrip1);
             panel1.Location = new Point(0, 1);
@@ -125,9 +126,9 @@
             // 
             btnGirarDerecha.BackgroundImage = (Image)resources.GetObject("btnGirarDerecha.BackgroundImage");
             btnGirarDerecha.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGirarDerecha.Location = new Point(274, 53);
+            btnGirarDerecha.Location = new Point(267, 53);
             btnGirarDerecha.Name = "btnGirarDerecha";
-            btnGirarDerecha.Size = new Size(50, 50);
+            btnGirarDerecha.Size = new Size(40, 40);
             btnGirarDerecha.TabIndex = 11;
             btnGirarDerecha.TextAlign = ContentAlignment.MiddleRight;
             btnGirarDerecha.UseVisualStyleBackColor = true;
@@ -138,180 +139,9 @@
             btnGirarIzquierda.BackgroundImageLayout = ImageLayout.Stretch;
             btnGirarIzquierda.Location = new Point(218, 53);
             btnGirarIzquierda.Name = "btnGirarIzquierda";
-            btnGirarIzquierda.Size = new Size(50, 50);
+            btnGirarIzquierda.Size = new Size(40, 40);
             btnGirarIzquierda.TabIndex = 10;
             btnGirarIzquierda.UseVisualStyleBackColor = true;
-            // 
-            // btnRecortar
-            // 
-            btnRecortar.BackgroundImage = (Image)resources.GetObject("btnRecortar.BackgroundImage");
-            btnRecortar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRecortar.Location = new Point(68, 53);
-            btnRecortar.Name = "btnRecortar";
-            btnRecortar.Size = new Size(50, 50);
-            btnRecortar.TabIndex = 9;
-            btnRecortar.UseVisualStyleBackColor = true;
-            // 
-            // btnSeleccion
-            // 
-            btnSeleccion.BackgroundImage = (Image)resources.GetObject("btnSeleccion.BackgroundImage");
-            btnSeleccion.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSeleccion.Location = new Point(12, 53);
-            btnSeleccion.Name = "btnSeleccion";
-            btnSeleccion.Size = new Size(50, 50);
-            btnSeleccion.TabIndex = 8;
-            btnSeleccion.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(btnBorrador);
-            groupBox2.Controls.Add(btnBrocha);
-            groupBox2.Controls.Add(btnMarcador);
-            groupBox2.Controls.Add(btnTexto);
-            groupBox2.Controls.Add(btnLupa);
-            groupBox2.Controls.Add(btnLapiz);
-            groupBox2.Location = new Point(516, 0);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(156, 106);
-            groupBox2.TabIndex = 7;
-            groupBox2.TabStop = false;
-            // 
-            // btnBorrador
-            // 
-            btnBorrador.BackgroundImage = (Image)resources.GetObject("btnBorrador.BackgroundImage");
-            btnBorrador.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBorrador.Location = new Point(12, 59);
-            btnBorrador.Name = "btnBorrador";
-            btnBorrador.Size = new Size(40, 40);
-            btnBorrador.TabIndex = 6;
-            btnBorrador.UseVisualStyleBackColor = true;
-            // 
-            // btnBrocha
-            // 
-            btnBrocha.BackgroundImage = (Image)resources.GetObject("btnBrocha.BackgroundImage");
-            btnBrocha.BackgroundImageLayout = ImageLayout.Stretch;
-            btnBrocha.Location = new Point(58, 13);
-            btnBrocha.Name = "btnBrocha";
-            btnBrocha.Size = new Size(40, 40);
-            btnBrocha.TabIndex = 2;
-            btnBrocha.UseVisualStyleBackColor = true;
-            // 
-            // btnMarcador
-            // 
-            btnMarcador.BackgroundImage = (Image)resources.GetObject("btnMarcador.BackgroundImage");
-            btnMarcador.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMarcador.Location = new Point(58, 59);
-            btnMarcador.Name = "btnMarcador";
-            btnMarcador.Size = new Size(40, 40);
-            btnMarcador.TabIndex = 5;
-            btnMarcador.UseVisualStyleBackColor = true;
-            // 
-            // btnTexto
-            // 
-            btnTexto.BackgroundImage = (Image)resources.GetObject("btnTexto.BackgroundImage");
-            btnTexto.BackgroundImageLayout = ImageLayout.Stretch;
-            btnTexto.Location = new Point(104, 13);
-            btnTexto.Name = "btnTexto";
-            btnTexto.Size = new Size(40, 40);
-            btnTexto.TabIndex = 0;
-            btnTexto.UseVisualStyleBackColor = true;
-            btnTexto.Click += btnTexto_Click;
-            // 
-            // btnLupa
-            // 
-            btnLupa.BackgroundImage = (Image)resources.GetObject("btnLupa.BackgroundImage");
-            btnLupa.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLupa.Location = new Point(104, 59);
-            btnLupa.Name = "btnLupa";
-            btnLupa.Size = new Size(40, 40);
-            btnLupa.TabIndex = 4;
-            btnLupa.UseVisualStyleBackColor = true;
-            // 
-            // btnLapiz
-            // 
-            btnLapiz.BackColor = SystemColors.Control;
-            btnLapiz.BackgroundImage = (Image)resources.GetObject("btnLapiz.BackgroundImage");
-            btnLapiz.BackgroundImageLayout = ImageLayout.Stretch;
-            btnLapiz.Location = new Point(12, 13);
-            btnLapiz.Name = "btnLapiz";
-            btnLapiz.Size = new Size(40, 40);
-            btnLapiz.TabIndex = 3;
-            btnLapiz.UseVisualStyleBackColor = false;
-            // 
-            // GroupBoxBotonesFiguras
-            // 
-            GroupBoxBotonesFiguras.Controls.Add(btnPentagono);
-            GroupBoxBotonesFiguras.Controls.Add(btnCuadrado);
-            GroupBoxBotonesFiguras.Controls.Add(btnTriangulo);
-            GroupBoxBotonesFiguras.Controls.Add(btnRombo);
-            GroupBoxBotonesFiguras.Controls.Add(btnRectangulo);
-            GroupBoxBotonesFiguras.Controls.Add(btnCirculo);
-            GroupBoxBotonesFiguras.Location = new Point(666, -1);
-            GroupBoxBotonesFiguras.Name = "GroupBoxBotonesFiguras";
-            GroupBoxBotonesFiguras.Size = new Size(156, 106);
-            GroupBoxBotonesFiguras.TabIndex = 6;
-            GroupBoxBotonesFiguras.TabStop = false;
-            // 
-            // btnPentagono
-            // 
-            btnPentagono.BackgroundImage = (Image)resources.GetObject("btnPentagono.BackgroundImage");
-            btnPentagono.BackgroundImageLayout = ImageLayout.Stretch;
-            btnPentagono.Location = new Point(12, 59);
-            btnPentagono.Name = "btnPentagono";
-            btnPentagono.Size = new Size(40, 40);
-            btnPentagono.TabIndex = 6;
-            btnPentagono.UseVisualStyleBackColor = true;
-            // 
-            // btnCuadrado
-            // 
-            btnCuadrado.BackgroundImage = (Image)resources.GetObject("btnCuadrado.BackgroundImage");
-            btnCuadrado.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCuadrado.Location = new Point(58, 13);
-            btnCuadrado.Name = "btnCuadrado";
-            btnCuadrado.Size = new Size(40, 40);
-            btnCuadrado.TabIndex = 2;
-            btnCuadrado.UseVisualStyleBackColor = true;
-            // 
-            // btnTriangulo
-            // 
-            btnTriangulo.BackgroundImage = (Image)resources.GetObject("btnTriangulo.BackgroundImage");
-            btnTriangulo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnTriangulo.Location = new Point(58, 59);
-            btnTriangulo.Name = "btnTriangulo";
-            btnTriangulo.Size = new Size(40, 40);
-            btnTriangulo.TabIndex = 5;
-            btnTriangulo.UseVisualStyleBackColor = true;
-            // 
-            // btnRombo
-            // 
-            btnRombo.BackgroundImage = (Image)resources.GetObject("btnRombo.BackgroundImage");
-            btnRombo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRombo.Location = new Point(104, 13);
-            btnRombo.Name = "btnRombo";
-            btnRombo.Size = new Size(40, 40);
-            btnRombo.TabIndex = 0;
-            btnRombo.UseVisualStyleBackColor = true;
-            // 
-            // btnRectangulo
-            // 
-            btnRectangulo.BackgroundImage = (Image)resources.GetObject("btnRectangulo.BackgroundImage");
-            btnRectangulo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRectangulo.Location = new Point(104, 59);
-            btnRectangulo.Name = "btnRectangulo";
-            btnRectangulo.Size = new Size(40, 40);
-            btnRectangulo.TabIndex = 4;
-            btnRectangulo.UseVisualStyleBackColor = true;
-            // 
-            // btnCirculo
-            // 
-            btnCirculo.BackgroundImage = (Image)resources.GetObject("btnCirculo.BackgroundImage");
-            btnCirculo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCirculo.Location = new Point(12, 13);
-            btnCirculo.Name = "btnCirculo";
-            btnCirculo.Size = new Size(40, 40);
-            btnCirculo.TabIndex = 3;
-            btnCirculo.UseVisualStyleBackColor = true;
-            btnCirculo.Click += btnCirculo_Click;
             // 
             // menuStrip2
             // 
@@ -320,7 +150,7 @@
             menuStrip2.Dock = DockStyle.None;
             menuStrip2.ImageScalingSize = new Size(24, 24);
             menuStrip2.Items.AddRange(new ToolStripItem[] { grosorLineaToolStripMenuItem });
-            menuStrip2.Location = new Point(366, 64);
+            menuStrip2.Location = new Point(363, 62);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(134, 36);
             menuStrip2.TabIndex = 6;
@@ -363,6 +193,189 @@
             toolStripMenuItem4.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem4.Name = "toolStripMenuItem4";
             toolStripMenuItem4.Size = new Size(270, 34);
+            // 
+            // btnRecortar
+            // 
+            btnRecortar.BackgroundImage = (Image)resources.GetObject("btnRecortar.BackgroundImage");
+            btnRecortar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRecortar.Location = new Point(68, 53);
+            btnRecortar.Name = "btnRecortar";
+            btnRecortar.Size = new Size(50, 50);
+            btnRecortar.TabIndex = 9;
+            btnRecortar.UseVisualStyleBackColor = true;
+            btnRecortar.Click += btnRecortar_Click;
+            // 
+            // btnSeleccion
+            // 
+            btnSeleccion.BackgroundImage = (Image)resources.GetObject("btnSeleccion.BackgroundImage");
+            btnSeleccion.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSeleccion.Location = new Point(12, 53);
+            btnSeleccion.Name = "btnSeleccion";
+            btnSeleccion.Size = new Size(50, 50);
+            btnSeleccion.TabIndex = 8;
+            btnSeleccion.UseVisualStyleBackColor = true;
+            btnSeleccion.Click += btnSeleccion_Click;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(btnBorrador);
+            groupBox2.Controls.Add(btnRelleno);
+            groupBox2.Controls.Add(btnMarcador);
+            groupBox2.Controls.Add(btnTexto);
+            groupBox2.Controls.Add(btnLupa);
+            groupBox2.Controls.Add(btnLapiz);
+            groupBox2.Location = new Point(516, 0);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(156, 106);
+            groupBox2.TabIndex = 7;
+            groupBox2.TabStop = false;
+            // 
+            // btnBorrador
+            // 
+            btnBorrador.BackgroundImage = (Image)resources.GetObject("btnBorrador.BackgroundImage");
+            btnBorrador.BackgroundImageLayout = ImageLayout.Stretch;
+            btnBorrador.Location = new Point(12, 59);
+            btnBorrador.Name = "btnBorrador";
+            btnBorrador.Size = new Size(40, 40);
+            btnBorrador.TabIndex = 6;
+            btnBorrador.UseVisualStyleBackColor = true;
+            btnBorrador.Click += btnBorrador_Click;
+            // 
+            // btnRelleno
+            // 
+            btnRelleno.BackgroundImage = (Image)resources.GetObject("btnRelleno.BackgroundImage");
+            btnRelleno.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRelleno.Location = new Point(58, 13);
+            btnRelleno.Name = "btnRelleno";
+            btnRelleno.Size = new Size(40, 40);
+            btnRelleno.TabIndex = 2;
+            btnRelleno.UseVisualStyleBackColor = true;
+            btnRelleno.Click += btnRelleno_Click_1;
+            // 
+            // btnMarcador
+            // 
+            btnMarcador.BackgroundImage = (Image)resources.GetObject("btnMarcador.BackgroundImage");
+            btnMarcador.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMarcador.Location = new Point(58, 59);
+            btnMarcador.Name = "btnMarcador";
+            btnMarcador.Size = new Size(40, 40);
+            btnMarcador.TabIndex = 5;
+            btnMarcador.UseVisualStyleBackColor = true;
+            btnMarcador.Click += btnMarcador_Click;
+            // 
+            // btnTexto
+            // 
+            btnTexto.BackgroundImage = (Image)resources.GetObject("btnTexto.BackgroundImage");
+            btnTexto.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTexto.Location = new Point(104, 13);
+            btnTexto.Name = "btnTexto";
+            btnTexto.Size = new Size(40, 40);
+            btnTexto.TabIndex = 0;
+            btnTexto.UseVisualStyleBackColor = true;
+            btnTexto.Click += btnTexto_Click;
+            // 
+            // btnLupa
+            // 
+            btnLupa.BackgroundImage = (Image)resources.GetObject("btnLupa.BackgroundImage");
+            btnLupa.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLupa.Location = new Point(104, 59);
+            btnLupa.Name = "btnLupa";
+            btnLupa.Size = new Size(40, 40);
+            btnLupa.TabIndex = 4;
+            btnLupa.UseVisualStyleBackColor = true;
+            btnLupa.Click += btnLupa_Click;
+            // 
+            // btnLapiz
+            // 
+            btnLapiz.BackColor = Color.WhiteSmoke;
+            btnLapiz.BackgroundImage = (Image)resources.GetObject("btnLapiz.BackgroundImage");
+            btnLapiz.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLapiz.Location = new Point(12, 13);
+            btnLapiz.Name = "btnLapiz";
+            btnLapiz.Size = new Size(40, 40);
+            btnLapiz.TabIndex = 3;
+            btnLapiz.UseVisualStyleBackColor = false;
+            btnLapiz.Click += btnLapiz_Click;
+            // 
+            // GroupBoxBotonesFiguras
+            // 
+            GroupBoxBotonesFiguras.Controls.Add(btnPentagono);
+            GroupBoxBotonesFiguras.Controls.Add(btnCuadrado);
+            GroupBoxBotonesFiguras.Controls.Add(btnTriangulo);
+            GroupBoxBotonesFiguras.Controls.Add(btnRombo);
+            GroupBoxBotonesFiguras.Controls.Add(btnRectangulo);
+            GroupBoxBotonesFiguras.Controls.Add(btnCirculo);
+            GroupBoxBotonesFiguras.Location = new Point(666, -1);
+            GroupBoxBotonesFiguras.Name = "GroupBoxBotonesFiguras";
+            GroupBoxBotonesFiguras.Size = new Size(156, 106);
+            GroupBoxBotonesFiguras.TabIndex = 6;
+            GroupBoxBotonesFiguras.TabStop = false;
+            // 
+            // btnPentagono
+            // 
+            btnPentagono.BackgroundImage = (Image)resources.GetObject("btnPentagono.BackgroundImage");
+            btnPentagono.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPentagono.Location = new Point(12, 59);
+            btnPentagono.Name = "btnPentagono";
+            btnPentagono.Size = new Size(40, 40);
+            btnPentagono.TabIndex = 6;
+            btnPentagono.UseVisualStyleBackColor = true;
+            btnPentagono.Click += btnPentagono_Click;
+            // 
+            // btnCuadrado
+            // 
+            btnCuadrado.BackgroundImage = (Image)resources.GetObject("btnCuadrado.BackgroundImage");
+            btnCuadrado.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCuadrado.Location = new Point(58, 13);
+            btnCuadrado.Name = "btnCuadrado";
+            btnCuadrado.Size = new Size(40, 40);
+            btnCuadrado.TabIndex = 2;
+            btnCuadrado.UseVisualStyleBackColor = true;
+            btnCuadrado.Click += btnCuadrado_Click;
+            // 
+            // btnTriangulo
+            // 
+            btnTriangulo.BackgroundImage = (Image)resources.GetObject("btnTriangulo.BackgroundImage");
+            btnTriangulo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTriangulo.Location = new Point(58, 59);
+            btnTriangulo.Name = "btnTriangulo";
+            btnTriangulo.Size = new Size(40, 40);
+            btnTriangulo.TabIndex = 5;
+            btnTriangulo.UseVisualStyleBackColor = true;
+            btnTriangulo.Click += btnTriangulo_Click;
+            // 
+            // btnRombo
+            // 
+            btnRombo.BackgroundImage = (Image)resources.GetObject("btnRombo.BackgroundImage");
+            btnRombo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRombo.Location = new Point(104, 13);
+            btnRombo.Name = "btnRombo";
+            btnRombo.Size = new Size(40, 40);
+            btnRombo.TabIndex = 0;
+            btnRombo.UseVisualStyleBackColor = true;
+            btnRombo.Click += btnRombo_Click;
+            // 
+            // btnRectangulo
+            // 
+            btnRectangulo.BackgroundImage = (Image)resources.GetObject("btnRectangulo.BackgroundImage");
+            btnRectangulo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRectangulo.Location = new Point(104, 59);
+            btnRectangulo.Name = "btnRectangulo";
+            btnRectangulo.Size = new Size(40, 40);
+            btnRectangulo.TabIndex = 4;
+            btnRectangulo.UseVisualStyleBackColor = true;
+            btnRectangulo.Click += btnRectangulo_Click;
+            // 
+            // btnCirculo
+            // 
+            btnCirculo.BackgroundImage = (Image)resources.GetObject("btnCirculo.BackgroundImage");
+            btnCirculo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCirculo.Location = new Point(12, 13);
+            btnCirculo.Name = "btnCirculo";
+            btnCirculo.Size = new Size(40, 40);
+            btnCirculo.TabIndex = 3;
+            btnCirculo.UseVisualStyleBackColor = true;
+            btnCirculo.Click += btnCirculo_Click;
             // 
             // groupBox1
             // 
@@ -413,6 +426,7 @@
             btnColorCafe.Size = new Size(30, 30);
             btnColorCafe.TabIndex = 22;
             btnColorCafe.UseVisualStyleBackColor = false;
+            btnColorCafe.Click += btnColorCafe_Click_1;
             // 
             // btnColorLila
             // 
@@ -422,6 +436,7 @@
             btnColorLila.Size = new Size(30, 30);
             btnColorLila.TabIndex = 21;
             btnColorLila.UseVisualStyleBackColor = false;
+            btnColorLila.Click += btnColorLila_Click;
             // 
             // btnColorAzulClaro
             // 
@@ -431,6 +446,7 @@
             btnColorAzulClaro.Size = new Size(30, 30);
             btnColorAzulClaro.TabIndex = 20;
             btnColorAzulClaro.UseVisualStyleBackColor = false;
+            btnColorAzulClaro.Click += btnColorAzulClaro_Click;
             // 
             // btnColorMorado
             // 
@@ -440,6 +456,7 @@
             btnColorMorado.Size = new Size(30, 30);
             btnColorMorado.TabIndex = 17;
             btnColorMorado.UseVisualStyleBackColor = false;
+            btnColorMorado.Click += btnColorMorado_Click;
             // 
             // btnColorAzulMarino
             // 
@@ -449,6 +466,7 @@
             btnColorAzulMarino.Size = new Size(30, 30);
             btnColorAzulMarino.TabIndex = 16;
             btnColorAzulMarino.UseVisualStyleBackColor = false;
+            btnColorAzulMarino.Click += btnColorAzulMarino_Click;
             // 
             // btnColorCelesteClaro
             // 
@@ -458,6 +476,7 @@
             btnColorCelesteClaro.Size = new Size(30, 30);
             btnColorCelesteClaro.TabIndex = 15;
             btnColorCelesteClaro.UseVisualStyleBackColor = false;
+            btnColorCelesteClaro.Click += btnColorCelesteClaro_Click;
             // 
             // btnColorVerdeClaro
             // 
@@ -467,6 +486,7 @@
             btnColorVerdeClaro.Size = new Size(30, 30);
             btnColorVerdeClaro.TabIndex = 14;
             btnColorVerdeClaro.UseVisualStyleBackColor = false;
+            btnColorVerdeClaro.Click += btnColorVerdeClaro_Click;
             // 
             // btnColorBeige
             // 
@@ -476,6 +496,7 @@
             btnColorBeige.Size = new Size(30, 30);
             btnColorBeige.TabIndex = 13;
             btnColorBeige.UseVisualStyleBackColor = false;
+            btnColorBeige.Click += btnColorBeige_Click;
             // 
             // btnColorOro
             // 
@@ -485,6 +506,7 @@
             btnColorOro.Size = new Size(30, 30);
             btnColorOro.TabIndex = 12;
             btnColorOro.UseVisualStyleBackColor = false;
+            btnColorOro.Click += btnColorOro_Click;
             // 
             // btnColorRosa
             // 
@@ -494,6 +516,7 @@
             btnColorRosa.Size = new Size(30, 30);
             btnColorRosa.TabIndex = 11;
             btnColorRosa.UseVisualStyleBackColor = false;
+            btnColorRosa.Click += btnColorRosa_Click;
             // 
             // btnColorGrisClaro
             // 
@@ -503,6 +526,7 @@
             btnColorGrisClaro.Size = new Size(30, 30);
             btnColorGrisClaro.TabIndex = 9;
             btnColorGrisClaro.UseVisualStyleBackColor = false;
+            btnColorGrisClaro.Click += btnColorGrisClaro_Click;
             // 
             // btnColorBlanco
             // 
@@ -512,6 +536,7 @@
             btnColorBlanco.Size = new Size(30, 30);
             btnColorBlanco.TabIndex = 8;
             btnColorBlanco.UseVisualStyleBackColor = false;
+            btnColorBlanco.Click += btnColorBlanco_Click;
             // 
             // btnColorCeleste
             // 
@@ -521,6 +546,7 @@
             btnColorCeleste.Size = new Size(30, 30);
             btnColorCeleste.TabIndex = 7;
             btnColorCeleste.UseVisualStyleBackColor = false;
+            btnColorCeleste.Click += btnColorCeleste_Click;
             // 
             // btnColorVerde
             // 
@@ -530,6 +556,7 @@
             btnColorVerde.Size = new Size(30, 30);
             btnColorVerde.TabIndex = 6;
             btnColorVerde.UseVisualStyleBackColor = false;
+            btnColorVerde.Click += btnColorVerde_Click;
             // 
             // btnColorAmarillo
             // 
@@ -539,6 +566,7 @@
             btnColorAmarillo.Size = new Size(30, 30);
             btnColorAmarillo.TabIndex = 5;
             btnColorAmarillo.UseVisualStyleBackColor = false;
+            btnColorAmarillo.Click += btnColorAmarillo_Click;
             // 
             // btnColorNaranja
             // 
@@ -548,6 +576,7 @@
             btnColorNaranja.Size = new Size(30, 30);
             btnColorNaranja.TabIndex = 4;
             btnColorNaranja.UseVisualStyleBackColor = false;
+            btnColorNaranja.Click += btnColorNaranja_Click;
             // 
             // btnColorRojo
             // 
@@ -557,6 +586,7 @@
             btnColorRojo.Size = new Size(30, 30);
             btnColorRojo.TabIndex = 3;
             btnColorRojo.UseVisualStyleBackColor = false;
+            btnColorRojo.Click += btnColorRojo_Click;
             // 
             // btnColorRojoOscuro
             // 
@@ -566,6 +596,7 @@
             btnColorRojoOscuro.Size = new Size(30, 30);
             btnColorRojoOscuro.TabIndex = 2;
             btnColorRojoOscuro.UseVisualStyleBackColor = false;
+            btnColorRojoOscuro.Click += btnColorRojoOscuro_Click;
             // 
             // btnColorGris
             // 
@@ -575,6 +606,7 @@
             btnColorGris.Size = new Size(30, 30);
             btnColorGris.TabIndex = 1;
             btnColorGris.UseVisualStyleBackColor = false;
+            btnColorGris.Click += btnColorGris_Click;
             // 
             // btnColorNegro
             // 
@@ -584,11 +616,12 @@
             btnColorNegro.Size = new Size(30, 30);
             btnColorNegro.TabIndex = 0;
             btnColorNegro.UseVisualStyleBackColor = false;
+            btnColorNegro.Click += btnColorNegro_Click;
             // 
             // menuStrip1
             // 
             menuStrip1.Anchor = AnchorStyles.Left;
-            menuStrip1.BackColor = SystemColors.AppWorkspace;
+            menuStrip1.BackColor = Color.MediumTurquoise;
             menuStrip1.Dock = DockStyle.None;
             menuStrip1.ImageScalingSize = new Size(24, 24);
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, editarToolStripMenuItem, verToolStripMenuItem, guardarToolStripMenuItem, deshacerToolStripMenuItem, rehacerToolStripMenuItem });
@@ -611,6 +644,7 @@
             nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             nuevoToolStripMenuItem.Size = new Size(228, 34);
             nuevoToolStripMenuItem.Text = "Nuevo";
+            nuevoToolStripMenuItem.Click += nuevoToolStripMenuItem_Click;
             // 
             // abrirToolStripMenuItem
             // 
@@ -644,12 +678,42 @@
             editarToolStripMenuItem.Size = new Size(73, 29);
             editarToolStripMenuItem.Text = "Editar";
             // 
+            // copiarToolStripMenuItem
+            // 
+            copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
+            copiarToolStripMenuItem.Size = new Size(166, 34);
+            copiarToolStripMenuItem.Text = "Copiar";
+            // 
+            // pegarToolStripMenuItem
+            // 
+            pegarToolStripMenuItem.Name = "pegarToolStripMenuItem";
+            pegarToolStripMenuItem.Size = new Size(166, 34);
+            pegarToolStripMenuItem.Text = "Pegar";
+            // 
+            // cortarToolStripMenuItem
+            // 
+            cortarToolStripMenuItem.Name = "cortarToolStripMenuItem";
+            cortarToolStripMenuItem.Size = new Size(166, 34);
+            cortarToolStripMenuItem.Text = "Cortar";
+            // 
             // verToolStripMenuItem
             // 
             verToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cuadriculaToolStripMenuItem, zoomToolStripMenuItem });
             verToolStripMenuItem.Name = "verToolStripMenuItem";
             verToolStripMenuItem.Size = new Size(53, 29);
             verToolStripMenuItem.Text = "Ver";
+            // 
+            // cuadriculaToolStripMenuItem
+            // 
+            cuadriculaToolStripMenuItem.Name = "cuadriculaToolStripMenuItem";
+            cuadriculaToolStripMenuItem.Size = new Size(196, 34);
+            cuadriculaToolStripMenuItem.Text = "Cuadricula";
+            // 
+            // zoomToolStripMenuItem
+            // 
+            zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
+            zoomToolStripMenuItem.Size = new Size(196, 34);
+            zoomToolStripMenuItem.Text = "Zoom";
             // 
             // guardarToolStripMenuItem
             // 
@@ -677,36 +741,9 @@
             picPaint.Size = new Size(1254, 518);
             picPaint.TabIndex = 5;
             picPaint.TabStop = false;
-            // 
-            // copiarToolStripMenuItem
-            // 
-            copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
-            copiarToolStripMenuItem.Size = new Size(270, 34);
-            copiarToolStripMenuItem.Text = "Copiar";
-            // 
-            // pegarToolStripMenuItem
-            // 
-            pegarToolStripMenuItem.Name = "pegarToolStripMenuItem";
-            pegarToolStripMenuItem.Size = new Size(270, 34);
-            pegarToolStripMenuItem.Text = "Pegar";
-            // 
-            // cortarToolStripMenuItem
-            // 
-            cortarToolStripMenuItem.Name = "cortarToolStripMenuItem";
-            cortarToolStripMenuItem.Size = new Size(270, 34);
-            cortarToolStripMenuItem.Text = "Cortar";
-            // 
-            // cuadriculaToolStripMenuItem
-            // 
-            cuadriculaToolStripMenuItem.Name = "cuadriculaToolStripMenuItem";
-            cuadriculaToolStripMenuItem.Size = new Size(270, 34);
-            cuadriculaToolStripMenuItem.Text = "Cuadricula";
-            // 
-            // zoomToolStripMenuItem
-            // 
-            zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            zoomToolStripMenuItem.Size = new Size(270, 34);
-            zoomToolStripMenuItem.Text = "Zoom";
+            picPaint.MouseDown += picPaint_MouseDown;
+            picPaint.MouseMove += picPaint_MouseMove;
+            picPaint.MouseUp += picPaint_MouseUp;
             // 
             // Form1
             // 
@@ -716,13 +753,13 @@
             Controls.Add(picPaint);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "RAOTECH";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            GroupBoxBotonesFiguras.ResumeLayout(false);
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            GroupBoxBotonesFiguras.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -779,7 +816,7 @@
         private PictureBox picPaint;
         private GroupBox groupBox2;
         private Button btnBorrador;
-        private Button btnBrocha;
+        private Button btnRelleno;
         private Button btnMarcador;
         private Button btnTexto;
         private Button btnLupa;
