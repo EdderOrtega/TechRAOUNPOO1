@@ -169,7 +169,7 @@
             toolStripMenuItem2.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem2.BackgroundImage");
             toolStripMenuItem2.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(270, 34);
+            toolStripMenuItem2.Size = new Size(102, 34);
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem3
@@ -177,7 +177,7 @@
             toolStripMenuItem3.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem3.BackgroundImage");
             toolStripMenuItem3.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(270, 34);
+            toolStripMenuItem3.Size = new Size(102, 34);
             // 
             // toolStripMenuItem5
             // 
@@ -185,14 +185,14 @@
             toolStripMenuItem5.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem5.BackgroundImage");
             toolStripMenuItem5.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(270, 34);
+            toolStripMenuItem5.Size = new Size(102, 34);
             // 
             // toolStripMenuItem4
             // 
             toolStripMenuItem4.BackgroundImage = (Image)resources.GetObject("toolStripMenuItem4.BackgroundImage");
             toolStripMenuItem4.BackgroundImageLayout = ImageLayout.Stretch;
             toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(270, 34);
+            toolStripMenuItem4.Size = new Size(102, 34);
             // 
             // btnRecortar
             // 
@@ -747,8 +747,7 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1278, 644);
             Controls.Add(picPaint);
             Controls.Add(panel1);

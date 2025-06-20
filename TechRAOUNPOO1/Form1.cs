@@ -21,6 +21,7 @@ namespace TechRAOUNPOO1
         public Form1()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.None;
             papel = picPaint.CreateGraphics();
             figura.Color = Color.Black.ToArgb();
             figura.Relleno = 0;
@@ -51,10 +52,6 @@ namespace TechRAOUNPOO1
             figura.TipoFigura = 5;
         }
 
-        private void btnColorCafe_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSelectorDeColor_Click(object sender, EventArgs e)
         {
@@ -109,6 +106,10 @@ namespace TechRAOUNPOO1
 
         }
         //FIGURAS
+        private void btnLapiz_Click(object sender, EventArgs e)
+        {
+            figura.TipoFigura = 0; // Tipo figura 0 para lápiz
+        }
         private void btnCuadrado_Click(object sender, EventArgs e)
         {
             figura.TipoFigura = 1;
@@ -339,9 +340,6 @@ namespace TechRAOUNPOO1
             }
         }
 
-        private void btnLapiz_Click(object sender, EventArgs e)
-        {
-            figura.TipoFigura = 0; // Tipo figura 0 para lápiz
-        }
+     
     }
 }
